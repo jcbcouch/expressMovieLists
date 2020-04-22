@@ -1,0 +1,19 @@
+
+
+
+<div class="movieStyle">
+          {{#each list.movies}}
+             <div class="card text-center">
+<div>
+   <a href="/movie/details/{{ this.imdbID }}">{{this.title}}</a>  </br> 
+   <img src={{ this.poster }}  alt="" class="round-img" />
+   <a href="/user/deletemovie/{{this.listid}}/{{this._id}}" style="color:black">remove this movie</a>
+    
+</div>
+
+
+            </div>
+               {{/each}} 
+             </div>
+
+            <a href="/user/delete/{{list._id}}">delete this movielist</a>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/style/style.css">
+  <title>Movie Finder</title>
+</head>
+<body>
+  <div id="App">
+   <nav class="navbar bg-primary">
+     <h1><a href="/">MOVIE FINDER</a></h1>
+
+                <ul>
+                  {{#if user}}
+                <li> <a href="/user/list">lists</a> </li>
+                <li> <a href="/user/logout">logout</a> </li>
+                {{else}}
+                <li> <a href="/user/login">login</a> </li>
+                <li> <a href="/user/register">register</a> </li>
+                {{/if}}
+                </ul>
+            </nav>
+
+            <div class='container'>
+                <form  class="form" action='/movie/search' method='POST'>
+                <input type="text" 
+                name="movieSearch" 
+                placeholder="Search Movies..."  
+                required/>
+                <input type="submit" value="Search" class="btn btn-dark btn-block" />
+                </form>
+                {{!-- <button class="btn btn-light btn-block">Clear</button> --}}
+                {{{body}}}
+            </div>
+            
+            </div>
+</body>
+</html>

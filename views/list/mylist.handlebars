@@ -1,0 +1,22 @@
+
+
+
+<div class="movieStyle">
+          {{#each list}}
+             <div class="card text-center">
+<div>
+    <h3>{{this.name}}</h3> <a href="/user/list/id/{{this._id}}">movies in this list</a>
+    
+</div>
+
+
+            </div>
+               {{/each}} 
+             </div>
+
+             <form action='/user/newlist' method='POST'>
+  new movielist name<br>
+  <input type="text" name="movielist" required>
+  <br>
+  <button type="submit">Submit</button>
+</form>

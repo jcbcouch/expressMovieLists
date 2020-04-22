@@ -1,0 +1,16 @@
+<div class="movieStyle">
+          {{#each body}}
+             <div class="card text-center">
+
+               
+                <img src={{ this.Poster }}  alt="" class="round-img" />
+                <h3>{{this.Title}}</h3>
+
+                
+                <a href="/movie/details/{{ this.imdbID }}" class='btn btn-dark btn-sm my-1'>more</a>
+               
+
+
+            </div>
+               {{/each}} 
+             </div>

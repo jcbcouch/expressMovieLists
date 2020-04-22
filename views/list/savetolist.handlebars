@@ -1,0 +1,27 @@
+<p>which list would you like to save movie to?</p>
+<div class="movieStyle">
+{{#each list}}
+<div class="card text-center">
+    <h3>{{this.name}}</h3>
+    <a href="/movie/savetolist/{{this._id}}/{{movieId}}">save to list</a>
+    
+
+
+</div>
+{{/each}}
+</div>
+
+
+
+{{!-- <div class="movieStyle">
+          {{#each list}}
+             <div class="card text-center">
+<div>
+    <h3>{{this.name}}</h3> <a href="/user/list/id/{{this._id}}">movies in this list</a>
+    
+</div>
+
+
+            </div>
+               {{/each}} 
+             </div> --}}

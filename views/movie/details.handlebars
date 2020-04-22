@@ -1,0 +1,30 @@
+<div class='card grid-2'>
+                    <div class='all-center'>
+                        <img src={{ body.Poster }} />
+                        <h1>{{ body.Title }}</h1>
+                        <p>Year: {{ body.Year }}</p>
+                    </div>
+                    <div>
+                        <h3>Plot</h3>
+                        <p>{{ body.Plot }}</p>
+                        <a href="https://www.imdb.com/title/{{ body.imdbID }}" class='btn btn-dark my-1'>Visit IMDB Page</a>
+                        <ul>
+                            <li>Director: {{ body.Director }}</li>
+                            <li>Rated: {{ body.Rated }}</li>
+                            <li>Released: {{ body.Released }}</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class='card text-center'>
+                    <div class='badge badge-primary'>BoxOffice: {{ body.BoxOffice }}</div>
+                    <div class='badge badge-success'>imdbRating: {{ body.imdbRating }}</div>
+                    <div class='badge badge-danger'>imdbVotes: {{ body.imdbVotes }}</div>
+                    <div class='badge badge-dark'>Production: {{ body.Production }}</div>
+                </div>
+
+                {{#if user}}
+                <div class='card text-center'>
+                    <a href="/movie/save/{{body.imdbID}}">save movie to list</a>
+                </div>
+                {{/if}}
